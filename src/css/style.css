@@ -1,0 +1,762 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --green: #27ae60;
+    --dark-color: #219150;
+    --black: #444;
+    --light-color: #666;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    transition: width none;
+}
+
+hr.new {
+    border-top: 1px solid #eec2c2;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--black);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: var(--green);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--dark-color);
+}
+
+.header .header-1 {
+    background: #fff;
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .header-1 .logo i {
+    color: var(--green);
+}
+
+.header .header-1 .search-form {
+    width: 50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.header .header-1 .search-form input {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    width: 100%;
+    height: 100%;
+    text-transform: none;
+    color: var(--black);
+}
+
+.header .header-1 .search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .header-1 .search-form label:hover {
+    color: var(--green);
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover {
+    color: var(--green);
+}
+
+.header .header-2 {
+    background-color: var(--green);
+}
+
+.header .header-2 .navbar {
+    text-align: center;
+}
+
+.header .header-2 .navbar a {
+    color: #fff;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+}
+
+.header .header-2 .navbar a:hover {
+    background-color: var(--dark-color);
+}
+
+.header .header-2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+
+.login-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+
+.login-form-container form {
+    background-color: #fff;
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+
+.login-form-container form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+}
+
+.login-form-container form span {
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.login-form-container form .box {
+    width: 100%;
+    margin: 0.7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.login-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.login-form-container form .checkbox label {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.login-form-container form .btn {
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.login-form-container form p {
+    padding-top: 0.8rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+.login-form-container form p a {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.login-form-container.active {
+    right: 0;
+}
+
+.register-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+
+.register-form-container form {
+    background-color: #fff;
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem 4rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+.register-form-container form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+}
+
+.register-form-container form .box {
+    width: 100%;
+    margin: 0.7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.register-form-container #close-register-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.register-form-container.active {
+    right: 0;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+.home {
+    background: url(../img/home-background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .row .content {
+    flex: 1 1 42rem;
+    margin-top: 2rem;
+}
+
+.home .row .books-slider {
+    flex: 1 1 42rem;
+    text-align: center;
+}
+
+.home .row .books-slider a {
+    height: 25rem;
+}
+
+.home .row .books-slider a:hover img {
+    transform: scale(0.9);
+}
+
+.home .row .books-slider a img {
+    width: 17.5rem;
+    height: 25rem;
+    padding: 0.7rem;
+    object-fit: cover;
+}
+
+.home .row .content h3 {
+    color: var(--black);
+    font-size: 4.5rem;
+}
+
+.home .row .content p {
+    color: var(--black);
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.navbar .bars {
+    color: var(--black) !important;
+}
+
+.left-navigation {
+    width: 40rem;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.left-navigation .nav-section {
+    width: 100%;
+}
+
+.left-navigation .nav-greet {
+    padding: 2rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    background: #232f3e;
+    height: 5rem;
+}
+
+.left-navigation .nav-greet h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.left-navigation .nav-greet .avatar {
+    font-size: 1.7rem;
+    color: #fff;
+    padding-right: 2rem;
+}
+
+.navigation {
+    background: rgba(51, 51, 51, 0.5);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+.navigation #close-navigation {
+    padding-left: 1rem;
+    font-size: 4rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navigation .left-navigation .nav-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation .left-navigation .nav-section h3 {
+    color: var(--black);
+    padding: 2rem;
+    font-size: 1.75rem;
+}
+
+.navigation .left-navigation .nav-section a {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1.75rem 4rem;
+    line-height: 3rem;
+    color: var(--black);
+}
+
+.navigation .left-navigation .nav-section a:hover {
+    background: #ced8d8;
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.bars {
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+body.disable {
+    overflow: hidden;
+    height: 100%;
+}
+
+.register-form-container .box {
+    width: 100%;
+    margin: 0.7rem 0;
+    font-size: 1.4rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.register-form-container p {
+    padding-top: 0.8rem;
+    color: var(--light-color);
+    font-size: 1.4rem;
+}
+
+.register-form-h1 .btn {
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+    background-color: #0599ff;
+    font-size: 1.5rem;
+}
+
+.register-form-container form .box::placeholder {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    font-style: normal;
+}
+
+.register-form-container form a {
+    color: #0599ff;
+    text-decoration: underline;
+    font-size: 1.4rem;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-container .icons {
+    padding: 2rem 0;
+}
+
+.icons-container .icons i {
+    font-size: 3rem;
+    color: var(--green);
+    padding-bottom: 0.7rem;
+}
+
+.icons-container .icons h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: 0.5rem;
+}
+
+.icons-container .icons p {
+    font-size: 1.4rem;
+    color: var(--light-color);
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/*
+Heading Popular this weeek
+*/
+.heading::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.heading span {
+    font-size: 3rem;
+    padding: 0.5rem 2rem;
+    color: var(--black);
+    background-color: #fff;
+}
+
+.popular .popular-slider {
+    margin-top: 2.5rem;
+}
+
+.popular .popular-slider .box .image img {
+    width: 17.5rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: black !important;
+}
+
+
+/* add product*/
+.footer{
+    margin-top:10rem;
+    width: 100vw;
+    background-color:var(--green);
+}
+
+.footer .box-container{
+
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    gap:1.5rem;
+}
+.footer .box-container .box h3{
+    font-size: 1.7rem;
+    color:var(--black);
+    padding:1rem 0;
+}
+.footer .box-container .box a{
+    display:block;
+    font-size: 1.4rem;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+.footer .box-container .box a i{
+    color:var(--green);
+    padding-right: .5rem;
+}
+.footer p{
+    font-size: 1.4rem;
+}
+
+.footer .credit{
+    border-top:var(--border);
+    margin-top:2rem;
+    padding:0 1rem;
+    padding-top:2.5rem;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.footer .credit span{
+    color:rgb(156, 33, 33);
+}
+
+.footer .input-email{
+    grid-column: span 2; 
+}
+.footer .box .submit #input-email{
+    border: 1px black solid;
+    border-radius: 0.5rem;
+    padding:0.7rem;
+    margin-right: 1.2rem;
+}
+.footer .box .submit .btn{
+    padding:0.7rem;
+    width: 10rem;
+    background-color:#1675b4;
+    font-size: 1.4rem;
+}
+
+
+/* About Us*/
+
+
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+    width: 100%;
+}
+
+.about-us .text {
+    max-width: 50%;
+}
+
+.about-us .text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.about-us .text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.about-us .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.about-us .stats div {
+    text-align: left;
+}
+
+.about-us .stats div h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.about-us .stats div p {
+    font-size: 1.4rem;
+    color: #95a5a6;
+    margin-top: 0.7rem;
+}
+
+.about-us .image {
+    margin-top: 2rem;
+    max-width: 40%;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us .image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.margin-footer{
+    margin-top:1rem;
+}
+
+
+/* Product CSS */
+
+
+.product-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding:7rem 10rem 1rem 10rem;
+    background-color: #fff;
+}
+
+.product-section .image {
+    flex: 0 0 30rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product-section .image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.product-section .details {
+    flex: 1;
+}
+
+.product-section .details h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.product-section .details .author-cost {
+    font-size: 1.7rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+
+.product-section .details .description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.product-section .details .description strong {
+    font-style: italic;
+}
+
+.product-section .details .buy-now {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #2c3e50;
+    border: 1px solid #2c3e50;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    background-color: #d4d7da;
+}
+
+.product-section .details .buy-now:hover {
+    background-color:var(--green);
+    color: #fff;
+}

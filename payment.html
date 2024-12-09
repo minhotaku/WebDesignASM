@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-1">
+            <a href="home.html" class="logo"><i class="fas fa-book-open"></i> MBook</a>
+            <form action="" class="search-form">
+                <div href="" class="bars" id="navigation-btn"><i class="fa-solid fa-bars"></i></div>
+                <input type="search" placeholder="Search Book" id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="payment.html" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+        </div>
+    </header>
+    <div class="navigation">
+        <section class="left-navigation">
+            <div class="nav-greet">
+                <a href="" class="avatar"><i class="fa-solid fa-user"></i></a>
+                <h3>Hello, Minh</h3>
+            </div>
+            <div class="nav-section">
+                <h3>Sách ngoại ngữ</h3>
+                <a href="">Tiếng Anh</a>
+                <a href="">Tiếng Nhật</a>
+                <a href="">Tiếng Trung</a>
+            </div>
+
+            <hr class="new">
+            <div class="nav-section">
+                <h3>Sách tham khảo</h3>
+                <a href="">Toán</a>
+                <a href="">Vật Lý</a>
+                <a href="">Hóa học</a>
+            </div>
+
+            <hr class="new">
+            <div class="nav-section">
+                <h3>Sách Văn học</h3>
+                <a href="">Văn học Việt Nam</a>
+                <a href="">Văn học Nga</a>
+                <a href="">Văn học phương Tây</a>
+            </div>
+
+            <hr class="new">
+            <div class="nav-section">
+                <h3>Tiểu Thuyết</h3>
+                <a href="">Trinh Thám</a>
+                <a href="">Kinh Dị</a>
+                <a href="">Viễn Tưởng</a>
+            </div>
+        </section>
+        <div id="close-navigation" class="fas fa-times"></div>
+    </div>
+    <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form action="">
+            <h3>Sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" name="" placeholder="Enter your email" id="">
+            <span>password</span>
+            <input type="password" class="box" name="" placeholder="Enter your password" id="">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forget password? <a href="#">click here</a></p>
+            <p>dont have an account? <a href="#" id="create-account">create one</a></p>
+        </form>
+    </div>
+    <div class="register-form-container">
+        <div id="close-register-btn" class="fas fa-times"></div>
+        <form action="">
+            <h3>Sign up</h3>
+            <input type="text" class="box" name="" placeholder="Full Name" id="">
+            <input type="text" class="box" name="" placeholder="Phone" id="">
+            <input type="email" class="box" name="" placeholder="Email" id="">
+            <input type="text" class="box" name="" placeholder="Address" id="">
+            <input type="password" class="box" name="" placeholder="Password" id="">
+            <input type="submit" value="sign up" class="btn">
+            <p>Already have an account? <a href="#" id="sign-in">Login</a></p>
+        </form>
+    </div>
+    <div class="checkout-container">
+        <!-- Danh sách sản phẩm -->
+        <div class="product-list">
+                <h2>Product List</h2>
+        </div>
+
+        <!-- Tổng giá trị và thanh toán -->
+        <div class="summary-section">
+
+            <h2>Order Summary</h2>
+            <div class="summary-item">
+                <span>Total:</span>
+                <span>0$</span>
+            </div>
+            <div class="summary-item">
+                <span>Tax (5%):</span>
+                <span>0$</span>
+            </div>
+            <div class="summary-item total">
+                <span>Grand Total:</span>
+                <span>0$</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+        
+    </div>
+
+    <script src="./payment.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
